@@ -33,7 +33,7 @@
         nodejs = pkgs.nodejs_20;
 
         # we're overriding everything from buildNpmPackage anyway
-        desmosMathquill = pkgs.stdenv.mkDerivation {
+        desmosMathquill = pkgs.stdenvNoCC.mkDerivation {
           inherit src pname version;
 
           # handle dependencies with importNpmLock
