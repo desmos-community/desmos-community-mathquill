@@ -1,0 +1,26 @@
+{
+  "name": "@desmos-community/mathquill",
+  "description": "Nightly builds of the desmosinc/mathquill fork",
+  "license": "MPL-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/desmosinc/mathquill.git"
+  },
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "types": "./dist/index.d.ts"
+    },
+    "./global": {
+      "import": "./dist/index.global.js",
+      "types": "./dist/index.global.d.ts"
+    },
+    "./style.css": "./dist/style.css",
+    "./fonts/*": "./dist/fonts/*"
+  },
+  "sideEffects": [
+    "./dist/index.global.js",
+    "./style.css"
+  ]
+}

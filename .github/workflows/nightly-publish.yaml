@@ -1,0 +1,54 @@
+name: Nightly update and publish
+on:
+  schedule:
+    - cron: '0 6 * * *'  # 2 AM EST daily
+  workflow_dispatch:
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+      - uses: DeterminateSystems/nix-installer-action@main
+      - uses: DeterminateSystems/magic-nix-cache-action@main
+      
+      - name: Update inputs
+        run: nix flake lock --update-input desmos-mathquill
+
+      - name: Check for changes
+        id: check-dirty
+        run: |
+          # if manually triggered, pretend there are changes
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "is_dirty=true" >> $GITHUB_OUTPUT
+            exit 0
+          fi
+          
+          # check if flake.lock was updated 
+          if [ -n "$(git status --porcelain)" ]; then
+            echo "is_dirty=true" >> $GITHUB_OUTPUT
+          else
+            echo "is_dirty=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Update README.md
+        if: steps.check-dirty.outputs.is_dirty == 'true'
+        run: |
+          nix build
+          cp result/README.md .
+
+      - name: Commit changes
+        if: steps.check-dirty.outputs.is_dirty == 'true'
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -a -m "Nightly update"
+          git push
+
+      - name: Publish to npm
+        if: steps.check-dirty.outputs.is_dirty == 'true'
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: nix run .#publish
