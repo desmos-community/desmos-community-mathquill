@@ -24,7 +24,7 @@ Add the following tags to your HTML:
       crossorigin="anonymous"
       referrerpolicy="no-referrer">
 <script src="https://cdn.jsdelivr.net/npm/@desmos-community/mathquill@2025.9.21-experimental/dist/index.global.js"
-        integrity="sha384-AmHoMjBOweUEi4tCjAPj4XaRhz6oKKl3+K4giwVla5MoRQrGJmLm6/LPksfUr97c"
+        integrity="sha384-dfC1rUhcLsLg1CIlUQE185W15UNsY3DU6aU7Hcaod2HoVSJplcW7oS4Ev5vTEK/V"
         crossorigin="anonymous"
         referrerpolicy="no-referrer"></script>
 ```
