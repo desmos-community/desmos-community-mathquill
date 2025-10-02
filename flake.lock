@@ -3,11 +3,11 @@
     "desmos-mathquill": {
       "flake": false,
       "locked": {
-        "lastModified": 1759174939,
-        "narHash": "sha256-LAaBjrBBzUs+YxswxMwqOElC0JyVNIIA4ZHWmghrpC4=",
+        "lastModified": 1759336990,
+        "narHash": "sha256-Wv1UUEs8CO0xGcfjL8IiLqd/ZMOwZgBt6VGoW5VP9U4=",
         "owner": "desmosinc",
         "repo": "mathquill",
-        "rev": "4593dc4dab4cccb30b930f2746458ac3cba0b3d7",
+        "rev": "fcafcee023291b951d77178ed2a6a34902d51058",
         "type": "github"
       },
       "original": {
