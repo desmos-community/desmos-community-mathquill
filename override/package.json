@@ -4,7 +4,7 @@
   "license": "MPL-2.0",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/desmosinc/mathquill.git"
+    "url": "git+https://github.com/desmos-community/desmos-community-mathquill.git"
   },
   "type": "module",
   "exports": {
