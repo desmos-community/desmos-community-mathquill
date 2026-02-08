@@ -37,7 +37,7 @@
             month = normalise (substring 4 2 dateStr);
             day = normalise (substring 6 2 dateStr);
           in
-          "${year}.${month}.${day}-experimental"; # remove once confirmed working
+          "${year}.${month}.${day}";
 
         nodejs = pkgs.nodejs_25;
 
