@@ -4,11 +4,11 @@ MathQuill is a web formula editor designed to make typing math easy and beautifu
 
 ## Mathquill vs. Desmos Mathquill
 
-The original Mathquill repository can be found at [mathquill/mathquill](https://github.com/mathquill/mathquill). However, it is lacking many features and not well-maintained. This package is built from the [desmosinc/mathquill](https://github.com/desmosinc/mathquill) fork, which contains many new features and bug fixes.
+The original Mathquill repository can be found at [mathquill/mathquill](https://github.com/mathquill/mathquill). However, it is lacking many features and is not well-maintained. This package is built from the [desmosinc/mathquill](https://github.com/desmosinc/mathquill) fork, which contains many new features and bug fixes but is meant primarily for use in the Desmos graphing calculator.
 
 One caveat of Desmos Mathquill is the fact that it only supports the "basic" build type, meaning that interactively adding LaTeX commands is not supported. Instead, you're expected to use the `autoOperatorNames` and `autoCommands` options to automatically replace typed text with their respective operatornames/symbols.
 
-As this fork is meant to be continuously integrated into the Desmos graphing calculator, it does not provide any form of official pre-built packages. This package is an **unofficial release**, automatically built nightly from the Desmos Mathquill repository. As such, it does not distinguish between breaking and non-breaking changes.
+As Desmos Mathquill is meant to be continuously integrated into the Desmos graphing calculator, it does not provide any form of official pre-built packages. This package is an **unofficial release**, automatically built nightly from the Desmos Mathquill repository. As such, it does not distinguish between breaking and non-breaking changes.
 
 ## Installation and Usage
 You can use this package in one of two ways:
@@ -19,11 +19,11 @@ Add the following tags to your HTML:
 
 ```html
 <link rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@desmos-community/mathquill@2025.12.3-experimental/dist/style.css"
+      href="https://cdn.jsdelivr.net/npm/@desmos-community/mathquill@2026.2.8/dist/style.css"
       integrity="sha384-EwTGPJ5T8P/KXJk/NW5ysp5Sp2u6Tv6HQZgViiSZBtUW4jGQW0JHIjLjAdD9qHMu"
       crossorigin="anonymous"
       referrerpolicy="no-referrer">
-<script src="https://cdn.jsdelivr.net/npm/@desmos-community/mathquill@2025.12.3-experimental/dist/index.global.js"
+<script src="https://cdn.jsdelivr.net/npm/@desmos-community/mathquill@2026.2.8/dist/index.global.js"
         integrity="sha384-Y2IEyQlqHgLMtNeUtGOvMVwi7F+xkxu/apGQwYoJEMvNDxFuq4qIlyR5d3fBJbUw"
         crossorigin="anonymous"
         referrerpolicy="no-referrer"></script>
@@ -35,7 +35,7 @@ Add the following tags to your HTML:
 const MQ = MathQuill.getInterface(3);
 ```
 
-Alternatively, you can use the ESM version via a CDN. There are multiple ways to do this, so I'll leave that up to you, the user :)
+Alternatively, you can use the ESM version via a CDN. This can be done directly through a URL pointing to the ESM entry point, or via an import map.
 
 ### Use with a bundler
 
