@@ -19,12 +19,12 @@ Add the following tags to your HTML:
 
 ```html
 <link rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@desmos-community/mathquill@2026.2.8/dist/style.css"
+      href="https://cdn.jsdelivr.net/npm/@desmos-community/mathquill@2026.2.11/dist/style.css"
       integrity="sha384-EwTGPJ5T8P/KXJk/NW5ysp5Sp2u6Tv6HQZgViiSZBtUW4jGQW0JHIjLjAdD9qHMu"
       crossorigin="anonymous"
       referrerpolicy="no-referrer">
-<script src="https://cdn.jsdelivr.net/npm/@desmos-community/mathquill@2026.2.8/dist/index.global.js"
-        integrity="sha384-Y2IEyQlqHgLMtNeUtGOvMVwi7F+xkxu/apGQwYoJEMvNDxFuq4qIlyR5d3fBJbUw"
+<script src="https://cdn.jsdelivr.net/npm/@desmos-community/mathquill@2026.2.11/dist/index.global.js"
+        integrity="sha384-uDssHQOGx7vKnkildyVacj6Wtkr59RLWBGQpv/enX+w12DWJ+E0US6d+QhjYLAmB"
         crossorigin="anonymous"
         referrerpolicy="no-referrer"></script>
 ```
