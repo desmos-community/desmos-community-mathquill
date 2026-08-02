@@ -40,7 +40,7 @@
           in
           "${year}.${month}.${day}";
 
-        nodejs = pkgs.nodejs_25;
+        nodejs = pkgs.nodejs;
 
         # we're overriding everything from buildNpmPackage anyway
         desmosMathquill = pkgs.stdenvNoCC.mkDerivation {
