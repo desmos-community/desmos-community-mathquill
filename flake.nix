@@ -30,12 +30,13 @@
         # calver, unusual for npm but this is a nightly ci build
         version =
           let
-            inherit (builtins) substring;
-            normalise = pkgs.lib.strings.removePrefix "0";
-            dateStr = self.lastModifiedDate;
+            inherit (pkgs.lib.strings) substring removePrefix;
+            normalise = removePrefix "0";
+            dateStr = self.inputs.desmos-mathquill.lastModifiedDate;
             year = normalise (substring 0 4 dateStr);
             month = normalise (substring 4 2 dateStr);
             day = normalise (substring 6 2 dateStr);
+            # time = substring 8 6 dateStr;
           in
           "${year}.${month}.${day}";
 

@@ -64,7 +64,7 @@ const MQ = MathQuill.getInterface(3);
 
 ## Versioning
 
-For the reasons explained above, this package does not follow semantic versioning. Instead, it uses calendar versioning, in the format `YYYY-MM-DD`. Because breaking changes can and do happen within a year, this package should be installed `--save-exact`. Alternatively, if you want continuous updates, you can manually update the dependency version in `package.json` to "latest". This will update to the latest version every time the lockfile is regenerated.
+For the reasons explained above, this package does not follow semantic versioning. Instead, it uses calendar versioning, in the format `YYYY.MM.DD`. Because breaking changes can and do happen within a year, this package should be installed `--save-exact`. Alternatively, if you want continuous updates, you can manually update the dependency version in `package.json` to "latest". This will update to the latest version every time the lockfile is regenerated.
 
 ---
 
