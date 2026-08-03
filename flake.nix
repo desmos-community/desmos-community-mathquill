@@ -127,15 +127,18 @@
             exit 0
           fi
 
+          nix build
+
+          echo "Publishing" >&2
+          ${nodejs}/bin/npm publish --access public ./result
+
           # update our readme
-          cp ${desmosMathquill}/README.md .
+          cp result/README.md .
 
           # push changes to repository
           git commit -a -m "Nightly update"
           git push
 
-          echo "Publishing version ${version}" >&2
-          ${nodejs}/bin/npm publish --access public ${desmosMathquill}
         '';
       in
       {
