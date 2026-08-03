@@ -19,12 +19,12 @@ Add the following tags to your HTML:
 
 ```html
 <link rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@desmos-community/mathquill@2026.4.21/dist/style.css"
-      integrity="sha384-2zmNLM0CT4XvSAxfYgs+hJtYV9f7b611ogOPR8O/fkQRWS0HMNcjPGbP7EFq+xNl"
+      href="https://cdn.jsdelivr.net/npm/@desmos-community/mathquill@2026.7.31/dist/style.css"
+      integrity="sha384-kxmWauR3hrnR58zJr6nfSrujglm07F/kTofdFjQ4XVmRLODbyAsQjFsx1Q1BbXJo"
       crossorigin="anonymous"
       referrerpolicy="no-referrer">
-<script src="https://cdn.jsdelivr.net/npm/@desmos-community/mathquill@2026.4.21/dist/index.global.js"
-        integrity="sha384-UO7hfHva0gKb0IApF/iduaXgVU+2nw0iQwDBqAbMBsw+9+svcsjetCftKyfiQSkT"
+<script src="https://cdn.jsdelivr.net/npm/@desmos-community/mathquill@2026.7.31/dist/index.global.js"
+        integrity="sha384-j6LKfYNsoBbSURm0KeDkT95yvdGo0F5NUPZrvnLKVFrzuB8Ec5x3rWtnQKSaknYd"
         crossorigin="anonymous"
         referrerpolicy="no-referrer"></script>
 ```
@@ -64,7 +64,7 @@ const MQ = MathQuill.getInterface(3);
 
 ## Versioning
 
-For the reasons explained above, this package does not follow semantic versioning. Instead, it uses calendar versioning, in the format `YYYY-MM-DD`. Because breaking changes can and do happen within a year, this package should be installed `--save-exact`. Alternatively, if you want continuous updates, you can manually update the dependency version in `package.json` to "latest". This will update to the latest version every time the lockfile is regenerated.
+For the reasons explained above, this package does not follow semantic versioning. Instead, it uses calendar versioning, in the format `YYYY.MM.DD`. Because breaking changes can and do happen within a year, this package should be installed `--save-exact`. Alternatively, if you want continuous updates, you can manually update the dependency version in `package.json` to "latest". This will update to the latest version every time the lockfile is regenerated.
 
 ---
 
